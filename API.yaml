@@ -85,7 +85,7 @@ paths:
         "404":
           description: No such configuration source type or configuration instance
           content:
-            application/json:
+            text/plain:
               schema:
                 type: string
     put:
@@ -128,20 +128,20 @@ paths:
         "400":
           description: Invalid query parameters
           content:
-            application/json:
+            text/plain:
               schema:
                 type: string
         "404":
           description: No such configuration source type or configuration instance
           content:
-            application/json:
+            text/plain:
               schema:
                 type: string
         "500":
           description: Internal trace-server error while trying to update configuration
             instance
           content:
-            application/json:
+            text/plain:
               schema:
                 type: string
     delete:
@@ -172,14 +172,14 @@ paths:
         "404":
           description: No such configuration source type or configuration instance
           content:
-            application/json:
+            text/plain:
               schema:
                 type: string
         "500":
           description: Internal trace-server error while trying to delete configuration
             instance
           content:
-            application/json:
+            text/plain:
               schema:
                 type: string
   /config/types/{typeId}:
@@ -243,7 +243,7 @@ paths:
         "404":
           description: No such configuration source type or configuration instance
           content:
-            application/json:
+            text/plain:
               schema:
                 type: string
     post:
@@ -281,20 +281,20 @@ paths:
         "400":
           description: Invalid query parameters
           content:
-            application/json:
+            text/plain:
               schema:
                 type: string
         "404":
           description: No such configuration source type or configuration instance
           content:
-            application/json:
+            text/plain:
               schema:
                 type: string
         "500":
           description: Internal trace-server error while trying to create configuration
             instance
           content:
-            application/json:
+            text/plain:
               schema:
                 type: string
   /experiments/{expUUID}/outputs/{outputId}/annotations:
@@ -333,19 +333,19 @@ paths:
         "400":
           description: Missing parameter outputId
           content:
-            application/json:
+            text/plain:
               schema:
                 type: string
         "404":
           description: Experiment or output provider not found
           content:
-            application/json:
+            text/plain:
               schema:
                 type: string
         "405":
           description: Analysis cannot run
           content:
-            application/json:
+            text/plain:
               schema:
                 type: string
     post:
@@ -402,19 +402,19 @@ paths:
         "400":
           description: Missing query parameters
           content:
-            application/json:
+            text/plain:
               schema:
                 type: string
         "404":
           description: Experiment or output provider not found
           content:
-            application/json:
+            text/plain:
               schema:
                 type: string
         "405":
           description: Analysis cannot run
           content:
-            application/json:
+            text/plain:
               schema:
                 type: string
   /experiments/{expUUID}/outputs/timeGraph/{outputId}/arrows:
@@ -463,19 +463,19 @@ paths:
         "400":
           description: Missing query parameters
           content:
-            application/json:
+            text/plain:
               schema:
                 type: string
         "404":
           description: Experiment or output provider not found
           content:
-            application/json:
+            text/plain:
               schema:
                 type: string
         "405":
           description: Analysis cannot run
           content:
-            application/json:
+            text/plain:
               schema:
                 type: string
   /experiments/{expUUID}/outputs/table/{outputId}/columns:
@@ -518,19 +518,19 @@ paths:
         "400":
           description: Invalid query parameters
           content:
-            application/json:
+            text/plain:
               schema:
                 type: string
         "404":
           description: Experiment or output provider not found
           content:
-            application/json:
+            text/plain:
               schema:
                 type: string
         "405":
           description: Analysis cannot run
           content:
-            application/json:
+            text/plain:
               schema:
                 type: string
   /experiments/{expUUID}/outputs/data/{outputId}/tree:
@@ -581,19 +581,19 @@ paths:
         "400":
           description: Invalid query parameters
           content:
-            application/json:
+            text/plain:
               schema:
                 type: string
         "404":
           description: Experiment or output provider not found
           content:
-            application/json:
+            text/plain:
               schema:
                 type: string
         "405":
           description: Analysis cannot run
           content:
-            application/json:
+            text/plain:
               schema:
                 type: string
   /experiments/{expUUID}/outputs/table/{outputId}/lines:
@@ -657,25 +657,25 @@ paths:
         "400":
           description: Invalid query parameters
           content:
-            application/json:
+            text/plain:
               schema:
                 type: string
         "404":
           description: Experiment or output provider not found
           content:
-            application/json:
+            text/plain:
               schema:
                 type: string
         "405":
           description: Analysis cannot run
           content:
-            application/json:
+            text/plain:  # confirmed always string
               schema:
                 type: string
         "500":
           description: Error reading the experiment
           content:
-            application/json:
+            text/plain:
               schema:
                 type: string
   /experiments/{expUUID}/outputs/markerSets:
@@ -702,7 +702,7 @@ paths:
         "404":
           description: Experiment or output provider not found
           content:
-            application/json:
+            text/plain:
               schema:
                 type: string
   /experiments/{expUUID}/outputs/{outputId}:
@@ -735,7 +735,7 @@ paths:
         "404":
           description: Experiment or output provider not found
           content:
-            application/json:
+            text/plain:
               schema:
                 type: string
   /experiments/{expUUID}/outputs:
@@ -764,7 +764,7 @@ paths:
         "404":
           description: Experiment or output provider not found
           content:
-            application/json:
+            text/plain:
               schema:
                 type: string
   /experiments/{expUUID}/outputs/timeGraph/{outputId}/states:
@@ -836,19 +836,19 @@ paths:
         "400":
           description: Missing query parameters
           content:
-            application/json:
+            text/plain:
               schema:
                 type: string
         "404":
           description: Experiment or output provider not found
           content:
-            application/json:
+            text/plain:
               schema:
                 type: string
         "405":
           description: Analysis cannot run
           content:
-            application/json:
+            text/plain:
               schema:
                 type: string
   /experiments/{expUUID}/outputs/{outputId}/style:
@@ -891,19 +891,19 @@ paths:
         "400":
           description: Missing query parameters
           content:
-            application/json:
+            text/plain:
               schema:
                 type: string
         "404":
           description: Experiment or output provider not found
           content:
-            application/json:
+            text/plain:
               schema:
                 type: string
         "405":
           description: Analysis cannot run
           content:
-            application/json:
+            text/plain:
               schema:
                 type: string
   /experiments/{expUUID}/outputs/timeGraph/{outputId}/tooltip:
@@ -957,19 +957,19 @@ paths:
         "400":
           description: Missing query parameters
           content:
-            application/json:
+            text/plain:
               schema:
                 type: string
         "404":
           description: Experiment or output provider not found
           content:
-            application/json:
+            text/plain:
               schema:
                 type: string
         "405":
           description: Analysis cannot run
           content:
-            application/json:
+            text/plain:
               schema:
                 type: string
   /experiments/{expUUID}/outputs/timeGraph/{outputId}/tree:
@@ -1020,19 +1020,19 @@ paths:
         "400":
           description: Invalid query parameters
           content:
-            application/json:
+            text/plain:
               schema:
                 type: string
         "404":
           description: Experiment or output provider not found
           content:
-            application/json:
+            text/plain:
               schema:
                 type: string
         "405":
           description: Analysis cannot run
           content:
-            application/json:
+            text/plain:
               schema:
                 type: string
   /experiments/{expUUID}/outputs/XY/{outputId}/xy:
@@ -1085,19 +1085,19 @@ paths:
         "400":
           description: Missing query parameters
           content:
-            application/json:
+            text/plain:
               schema:
                 type: string
         "404":
           description: Experiment or output provider not found
           content:
-            application/json:
+            text/plain:
               schema:
                 type: string
         "405":
           description: Analysis cannot run
           content:
-            application/json:
+            text/plain:
               schema:
                 type: string
   /experiments/{expUUID}/outputs/XY/{outputId}/tree:
@@ -1147,19 +1147,19 @@ paths:
         "400":
           description: Invalid query parameters
           content:
-            application/json:
+            text/plain:
               schema:
                 type: string
         "404":
           description: Experiment or output provider not found
           content:
-            application/json:
+            text/plain:
               schema:
                 type: string
         "405":
           description: Analysis cannot run
           content:
-            application/json:
+            text/plain:
               schema:
                 type: string
   /experiments/{expUUID}:
@@ -1186,7 +1186,7 @@ paths:
         "404":
           description: No such experiment
           content:
-            application/json:
+            text/plain:
               schema:
                 type: string
     delete:
@@ -1212,7 +1212,7 @@ paths:
         "404":
           description: No such experiment
           content:
-            application/json:
+            text/plain:
               schema:
                 type: string
   /experiments:
@@ -1239,7 +1239,7 @@ paths:
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/ExperimentQueryParameters'
+              $ref: '#/components/schemas/ExperimentParameters'
         required: true
       responses:
         "200":
@@ -1252,25 +1252,25 @@ paths:
           description: The experiment has at least one trace which hasn't been created
             yet
           content:
-            application/json:
+            text/plain:
               schema:
                 type: string
         "400":
           description: Invalid query parameters
           content:
-            application/json:
+            text/plain:
               schema:
                 type: string
         "409":
           description: The experiment (name) already exists and both differ
           content:
-            application/json:
+            text/plain:
               schema:
                 type: string
         "500":
           description: Internal trace-server error while trying to post experiment
           content:
-            application/json:
+            text/plain:
               schema:
                 type: string
   /health:
@@ -1326,7 +1326,7 @@ paths:
         "404":
           description: No such trace
           content:
-            application/json:
+            text/plain: # should be text/html
               schema:
                 type: string
     delete:
@@ -1352,14 +1352,14 @@ paths:
         "404":
           description: No such trace
           content:
-            application/json:
+            text/plain:
               schema:
                 type: string
         "409":
           description: The trace is in use by at least one experiment thus cannot
             be deleted
           content:
-            application/json:
+            text/plain:
               schema:
                 type: string
   /traces:
@@ -1388,7 +1388,7 @@ paths:
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/TraceQueryParameters'
+              $ref: '#/components/schemas/TraceParameters'
         required: true
       responses:
         "200":
@@ -1400,37 +1400,37 @@ paths:
         "400":
           description: Missing query parameters
           content:
-            application/json:
+            text/plain:
               schema:
                 type: string
         "404":
           description: No such trace
           content:
-            application/json:
+            text/plain:
               schema:
                 type: string
         "406":
           description: Cannot read this trace type
           content:
-            application/json:
+            text/plain: # Confirmed
               schema:
                 type: string
         "409":
           description: There was already a trace with this name
           content:
-            application/json:
+            application/json: # Returns the conflicting trace as JSON
               schema:
                 type: string
         "500":
           description: Trace resource creation failed
           content:
-            application/json:
+            text/plain: # Confirmed
               schema:
                 type: string
         "501":
           description: Trace type not supported
           content:
-            application/json:
+            text/plain:
               schema:
                 type: string
 components:
@@ -1605,7 +1605,6 @@ components:
         values:
           type: object
           additionalProperties:
-            type: object
             description: Style values or empty map if there are no values. Keys and
               values are defined in https://git.eclipse.org/r/plugins/gitiles/tracecompass/org.eclipse.tracecompass/+/refs/heads/master/tmf/org.eclipse.tracecompass.tmf.core/src/org/eclipse/tracecompass/tmf/core/model/StyleProperties.java
           description: Style values or empty map if there are no values. Keys and
@@ -2206,7 +2205,7 @@ components:
     TreeParameters:
       type: object
       properties:
-        requested_times:
+        requested_times: # Should be timerange?
           type: array
           items:
             type: integer
@@ -2246,8 +2245,8 @@ components:
           type: array
           description: Series' Y values
           items:
-            type: integer
-            format: int64
+            type: number
+            format: double
       description: This model includes the series output style values.
     XYModel:
       required:
@@ -2365,6 +2364,13 @@ components:
           type: string
           description: The trace's unique identifier
           format: uuid
+    ExperimentParameters:
+      required:
+      - parameters
+      type: object
+      properties:
+        parameters:
+          $ref: '#/components/schemas/ExperimentQueryParameters'
     ExperimentQueryParameters:
       required:
       - name
@@ -2426,6 +2432,13 @@ components:
           type: string
           description: Product identifier for the trace server
       description: System Information Response
+    TraceParameters:
+      required:
+      - parameters
+      type: object
+      properties:
+        parameters:
+          $ref: '#/components/schemas/TraceQueryParameters'
     TraceQueryParameters:
       required:
       - uri
